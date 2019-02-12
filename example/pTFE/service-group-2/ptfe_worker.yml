@@ -1,0 +1,13 @@
+---
+applications:
+- name: ptfe_worker
+  group: app
+  description: executes the terraform run
+  technology: go
+  properties:
+    deployment: docker
+  provided-services:
+  - name: executes terraform plan/apply
+    type: desc
+  - name: can be replaced with custom image
+    type: note

@@ -1,0 +1,13 @@
+---
+applications:
+- name: vault
+  group: app
+  description: vault
+  technology: vault
+  properties:
+    deployment: docker
+    # main-docker-registry: project
+    healthcheck: /health
+  provided-services:
+  - name: encrypts all the things
+    type: desc

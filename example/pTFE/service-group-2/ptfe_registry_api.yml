@@ -1,0 +1,13 @@
+---
+applications:
+- name: ptfe_registry_api
+  group: app
+  description: private module registry api interface
+  technology: go
+  properties:
+    deployment: docker
+  provided-services:
+  - name: PMR frontend, interacts with db
+    type: desc
+  dependencies:
+    - reference: postgres

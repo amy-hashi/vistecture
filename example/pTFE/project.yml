@@ -1,0 +1,7 @@
+---
+projects:
+- name: "pTFE"
+- name: "Private Terraform Enterprise"
+  included-applications:
+  - name: ptfe_nginx
+  - name: influxdb

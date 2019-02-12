@@ -1,0 +1,14 @@
+---
+applications:
+- name: ptfe_migrations
+  group: app
+  description: Runs on startup
+  team: team1
+  technology: go
+  properties:
+    deployment: docker
+  provided-services:
+  - name: runs on startup only
+    type: when
+  dependencies:
+    - reference: postgres

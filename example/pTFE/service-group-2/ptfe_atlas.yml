@@ -1,0 +1,24 @@
+---
+applications:
+- name: ptfe_atlas
+  group: app
+  description: atlas
+  # team: team1
+  technology: ruby
+  properties:
+    deployment: docker
+    main-docker-registry: project
+    healthcheck: /health
+  provided-services:
+  - name: api
+    type: api
+  # - name: events
+  #   type: exchange
+  dependencies:
+    - reference: ptfe_sidekiq
+      isSameLevel: true
+    - reference: vault
+    - reference: archivist
+    - reference: ptfe_build_manager
+    - reference: ptfe_registry_api
+    - reference: postgres

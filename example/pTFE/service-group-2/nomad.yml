@@ -1,0 +1,14 @@
+---
+applications:
+- name: nomad
+  group: app
+  description: nomad
+  technology: nomad
+  properties:
+    deployment: docker
+  category: internal
+  provided-services:
+  - name: schedules sentinel runs
+    type: desc
+  dependencies:
+    - reference: sentinel

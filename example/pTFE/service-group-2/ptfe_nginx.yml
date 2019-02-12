@@ -1,0 +1,30 @@
+---
+applications:
+- name: ptfe_nginx
+  group: app
+  description: nginx
+  technology: nginx
+  # team: team1
+  category: external
+  properties:
+    deployment: docker
+    main-docker-registry: project
+    healthcheck: /_health_check
+  provided-services:
+  - name: api
+    type: api
+    isOpenHost: true
+    securityLevel: public
+  - name: ui
+    type: gui
+  - name: webhook
+    type: api
+  - name: web frontend
+    type: desc
+  infrastructure-dependencies:
+    - type: redis
+  dependencies:
+    - reference: ptfe_atlas
+      isBrowserBased: true
+    - reference: archivist
+      isBrowserBased: true

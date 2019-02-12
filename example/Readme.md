@@ -1,13 +1,6 @@
-# Vistecture example project
+# pTFE Archtitecture Digram
 
-This example can be used as a start for your own documentation project.
-The suggested folder structure is:
-
-* projectname: Folder that contains the *.yml files with the service architecture documentation
-* templates: Contains the templates that should be used in the generation
-* generate-documentation.sh - The main build script - it executes the desired vistecture commands and generates the desired documentation artefacts
-* build-with-docker.sh  - Helpful to run the generation local
-
+This code is used with vistecture. Please grab that code before working with this - https://github.com/AOEpeople/vistecture
 
 ## Usage
 

@@ -1,0 +1,17 @@
+---
+applications:
+- name: ptfe_build_worker
+  group: app
+  description: Build Worker - spins up worker containers
+  technology: go
+  properties:
+    deployment: docker
+  provided-services:
+  - name: rabbitmq
+    type: messenger
+  - name: spins up workers, injects data
+    type: desc
+  dependencies:
+    - reference: ptfe_worker
+    - reference: ptfe_atlas
+    - reference: archivist

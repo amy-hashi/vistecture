@@ -28,9 +28,9 @@ func (ComponentDrawer ApplicationDrawer) Draw(hidePlanned bool) string {
 	tableHeaderColor := ""
 	switch Component.Category {
 	case model.CATEGORY_EXTERNAL:
-		tableHeaderColor = "#8e0909"
+		tableHeaderColor = "#000000"
 	default:
-		tableHeaderColor = "#1B4E5E"
+		tableHeaderColor = "#5c4ee5"
 
 	}
 	// see http://www.graphviz.org/doc/info/shapes.html
@@ -41,14 +41,14 @@ func (ComponentDrawer ApplicationDrawer) Draw(hidePlanned bool) string {
 		if Component.Display.BorderColor != "" {
 			result += ", color=\"#BBBBBB\""
 		}
-		result += ", label=<<TABLE BGCOLOR=\"#1B4E5E\" ROWS=\"*\" CELLPADDING=\"3\" BORDER=\"0\" CELLBORDER=\"0\" CELLSPACING=\"0\"> \n"
+		result += ", label=<<TABLE BGCOLOR=\"#5c4ee5\" ROWS=\"*\" CELLPADDING=\"3\" BORDER=\"0\" CELLBORDER=\"0\" CELLSPACING=\"0\"> \n"
 		tableHeaderColor = "#BBBBBB"
 	} else {
 		result += "\"" + Component.Name + "\" [style=dotted, shape=plaintext "
 		if Component.Display.BorderColor != "" {
 			result += ", color=\"" + Component.Display.BorderColor + "\""
 		}
-		result += ", label=<<TABLE BGCOLOR=\"#1B4E5E\" ROWS=\"*\" CELLPADDING=\"3\" BORDER=\"2\" CELLBORDER=\"0\" CELLSPACING=\"0\"> \n"
+		result += ", label=<<TABLE BGCOLOR=\"#5c4ee5\" ROWS=\"*\" CELLPADDING=\"3\" BORDER=\"2\" CELLBORDER=\"0\" CELLSPACING=\"0\"> \n"
 	}
 
 	result += " <TR ><TD BGCOLOR=\"" + tableHeaderColor + "\"><FONT COLOR=\"#fefefe\">" + strings.Replace(strings.ToTitle(Component.Name), " / ", "\n<BR />", 1) + "</FONT></TD><TD BGCOLOR=\"" + tableHeaderColor + "\" width=\"50\" height=\"30\" fixedsize=\"true\" >" + icon + "</TD></TR> \n"

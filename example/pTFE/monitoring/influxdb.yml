@@ -1,0 +1,15 @@
+---
+applications:
+- name: influxdb
+  group: monitoring
+  description: influxdb
+  # technology: vault
+  properties:
+    deployment: docker
+    # main-docker-registry: project
+    healthcheck: /health
+  provided-services:
+  - name: collects logs
+    type: desc
+  dependencies:
+    - reference: telegraf

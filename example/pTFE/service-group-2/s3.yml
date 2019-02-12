@@ -1,0 +1,13 @@
+---
+applications:
+- name: s3
+  group: app
+  description: s3
+  technology: s3
+  properties:
+    deployment: docker
+    # main-docker-registry: project
+    healthcheck: /health
+  provided-services:
+  - name: api
+    type: api

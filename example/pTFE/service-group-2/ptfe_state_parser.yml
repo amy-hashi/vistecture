@@ -1,0 +1,15 @@
+---
+applications:
+- name: ptfe_state_parser
+  group: app
+  description: ptfe_state_parser
+  technology: go
+  properties:
+    deployment: docker
+    # main-docker-registry: project
+    healthcheck: /health
+  provided-services:
+  - name: processes the state
+    type: desc
+  dependencies:
+    - reference: ptfe_atlas

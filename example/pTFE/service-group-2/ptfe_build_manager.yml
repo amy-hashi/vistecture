@@ -1,0 +1,16 @@
+---
+applications:
+- name: ptfe_build_manager
+  group: app
+  description: Build Manager
+  team: team1
+  technology: go
+  properties:
+    deployment: docker
+  provided-services:
+  - name: rabbitmq
+    type: messenger
+  - name: manages the build queue
+    type: desc
+  dependencies:
+    - reference: ptfe_build_worker

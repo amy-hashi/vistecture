@@ -1,0 +1,16 @@
+---
+applications:
+- name: ptfe_registry_worker
+  group: app
+  description: private module registry worker - processes slug-ingress from repo, stores in postgres
+  technology: go
+  properties:
+    deployment: docker
+  provided-services:
+  - name: processes slug-ingress from repo
+    type: desc
+  - name: unpacks, process and store in db
+    type: desc
+  dependencies:
+    - reference: archivist
+    - reference: postgres

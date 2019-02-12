@@ -1,0 +1,14 @@
+---
+applications:
+- name: ptfe_ingress
+  group: app
+  description: slug_ingress
+  technology: go
+  properties:
+    deployment: docker
+  category: internal
+  provided-services:
+  - name: pulls in git repo and stores in archivist
+    type: desc
+  dependencies:
+    - reference: archivist

@@ -1,0 +1,13 @@
+---
+applications:
+- name: sentinel
+  group: app
+  description: sentinel
+  technology: hashicorp
+  properties:
+    deployment: docker
+  category: internal
+  provided-services:
+  - name: executes sentinel on plans/applies
+    type: desc
+  

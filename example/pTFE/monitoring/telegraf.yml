@@ -1,0 +1,14 @@
+---
+applications:
+- name: telegraf
+  group: monitoring
+  description: telegraf
+  properties:
+    deployment: docker
+    # main-docker-registry: project
+    healthcheck: /health
+  provided-services:
+  - name: when metrics are enabled
+    type: runs_when
+  - name: statsd endpoint
+    type: desc

@@ -1,0 +1,19 @@
+---
+applications:
+- name: archivist
+  group: app
+  description: Encrypts and stores state files, run logs, git repo checkouts and plans
+  team: team1
+  technology: go
+  properties:
+    deployment: docker
+  provided-services:
+  - name: encrypts data via vault
+    type: desc
+  - name: stores data in s3
+    type: desc
+  - name: state files, run logs, plans, git clone
+    type: data
+  dependencies:
+    - reference: vault
+    - reference: s3

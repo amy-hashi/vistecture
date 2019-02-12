@@ -1,0 +1,24 @@
+---
+applications:
+- name: ptfe_sidekiq
+  group: app
+  description: sidekiq
+  technology: ruby
+  properties:
+    deployment: docker
+  category: internal
+  provided-services:
+  - name: redis
+    type: redis
+  - name: atlas
+    type: image
+  - name: runs background jobs
+    type: desc
+  infrastructure-dependencies:
+    - type: postgres
+  dependencies:
+    - reference: nomad
+    - reference: ptfe_ingress
+    - reference: vault
+    - reference: ptfe_registry_worker
+    - reference: ptfe_state_parser

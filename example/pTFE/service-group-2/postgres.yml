@@ -1,0 +1,15 @@
+---
+applications:
+- name: postgres
+  group: app
+  description: postgres
+  technology: postgresql
+  properties:
+    deployment: docker
+    # main-docker-registry: project
+    healthcheck: /health
+  provided-services:
+  - name: atlas
+    type: database
+  - name: registry
+    type: database

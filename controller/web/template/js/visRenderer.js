@@ -257,10 +257,10 @@ visRenderer.applicationSvgUrl = function(application,colors) {
     var iconUrl = application.technology + '.png'
     var icon = '<img src=" + iconUrl + " scale="true" >'
     //console.log(colors)
-    var tableHeaderColor = colors.backgroundColor // "#1B4E5E"
+    var tableHeaderColor = colors.backgroundColor // "#000"
 
     if  (application.category == 'external') {
-        tableHeaderColor = "#8e0909"
+        tableHeaderColor = "#5c4ee5"
     }
 
 

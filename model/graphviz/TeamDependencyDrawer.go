@@ -148,7 +148,7 @@ func (d *TeamDependencyDrawer) DrawTeam(team string, applications []*model.Appli
 	// see http://4webmaster.de/wiki/Graphviz-Tutorial#Die_Darstellung_von_Edges_ver.C3.A4ndern
 	result += "\"" + team + "\" [shape=plaintext "
 
-	result += ", label=<<TABLE BGCOLOR=\"#1B4E5E\" ROWS=\"*\" CELLPADDING=\"3\" BORDER=\"2\" CELLBORDER=\"0\" CELLSPACING=\"0\"> \n"
+	result += ", label=<<TABLE BGCOLOR=\"#5c4ee5\" ROWS=\"*\" CELLPADDING=\"3\" BORDER=\"2\" CELLBORDER=\"0\" CELLSPACING=\"0\"> \n"
 	result += " <TR ><TD BGCOLOR=\"" + tableHeaderColor + "\"><FONT COLOR=\"#fefefe\">" + strings.Replace(strings.ToTitle(team), " / ", "\n<BR />", 1) + "</FONT></TD></TR> \n"
 
 	for _, app := range applications {
